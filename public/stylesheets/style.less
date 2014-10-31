@@ -11,6 +11,9 @@
 @color-white : #fff;
 @color-gray-lighter : #5a6d7d;
 
+@font-family-primary : "Varela Round", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+@font-family-secondary : "Helvetica", Arial, Lucida Grande, sans-serif;
+@font-family-tertiary : "Georgia";
 /**
 *
 * Misc
@@ -28,7 +31,7 @@ body {
 
 .navbar {
 	z-index: 10;
-	padding-top: 26px;
+	padding: 26px;
 	border: none;
 	background: white;
 
@@ -42,10 +45,13 @@ body {
 	}
 }
 
+
+
 @media (min-width: @screen-md-min) {
 	.navbar {
 		background: url("/images/bg-header-gradient.png") repeat-x !important;
 		background-size: cover;
+		padding-bottom: 0;
 
 		ul {
 			margin-top: -3px;
@@ -70,19 +76,34 @@ body {
 
 .header-bg {
 	position: relative;
+	top: -19px;
 	height: 640px;
 	background-size: cover;
 
 	.header-text {
 		position: relative;
-		top: 150px;
+		top: 180px;
 
 		h2 {
+			font-family: @font-family-primary;
+			font-weight: bold;
 			font-size: 36pt; 
+			line-height: 60px;
 			color: @color-blue-dark;
+			padding-bottom: 10px;
+
 		}
 		p {
+			font-family: @font-family-tertiary;
+			font-size: 13pt;
+			line-height: 30px;
 			color: @color-gray;
+			padding-bottom: 20px;
+		}
+
+		.how-we-work-btn {
+			font-family: @font-family-primary;
+			font-size: 12pt;
 		}
 	}
 }
@@ -98,11 +119,13 @@ body {
 }
 
 .transition-section {
+	padding: 40px 0;
 	background: #ebf0f4 url("/images/bg-homepage-pattern-gray.png");
 
 	h2 {
 		color: @color-blue-dark;
 		font-size: 19pt;
+		padding-bottom: 44px;
 	}
 
 	table {
@@ -157,6 +180,7 @@ body {
 	h2 {
 		color: @color-blue-dark;
 		font-size: 19pt;
+		padding-bottom: 44px;
 	}
 
 	h3 {
@@ -166,6 +190,10 @@ body {
 
 	p {
 		color: @color-gray-lighter;
+	}
+
+	.benefit-list {
+		padding: 20px 0;
 	}
 }
 

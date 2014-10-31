@@ -1,11 +1,4 @@
-doctype html
-html
-  head
-    title
-    link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
-    link(rel='stylesheet', href='/stylesheets/style.css')
-
-  body
+include ./layouts/header.jade
     nav.navbar.navbar-default(role="navigation")
       div.container
         div.navbar-header
@@ -20,40 +13,40 @@ html
             li
               a(href="/about-us") How we work 
             li
-              a(href="/about-us") Why Philippines 
+              a(href="/why-philippines") Why Philippines 
             li
-              a(href="/about-us") Pricing
+              a(href="/pricing") Pricing
             li
-              a(href="/about-us") Contact us 
+              a(href="/contact-us") Contact us 
     section.header-bg#homepage
       div.container-fluid
         div.row
           div.header-text
             div.col-lg-1
-            div.col-lg-5.col-md-12
-              h2 optimising accounting outsourcing
+            div.col-lg-6.col-md-12
+              h2 Optimising accounting outsourcing
               p optiBPO assists Australian & New Zealand companies setup offshore Accounting & Back Office operations in the Philippines.
               button.btn.btn-lg.primary-btn
-                span Learn how optiBPO can work best for your business
+                span.how-we-work-btn Learn how optiBPO can work best for your business
     section.model-section
       div.container
         div.row
-          div.col-lg-3
-          div.col-lg-6
+          div.col-lg-2
+          div.col-lg-8
             h2.text-center The optiBPO model is unique, in that it sits between traditional outsourcing, and setting up your own offshore business.  
-          div.col-lg-3
+          div.col-lg-2
         div.row
-          div.col-lg-3
-          div.col-lg-6
+          div.col-lg-2
+          div.col-lg-8
             .text-center  The model delivers clearly defined and effective processes, while ensuring that you always have oversight and control. They are an extension of your team, not a separate part, and they will report on their performance, providing you comfort that service levels are being met.
-          div.col-lg-3
+          div.col-lg-2
     section.transition-section
       div.container
         div.row
-          div.col-lg-3
-          div.col-lg-6
+          div.col-lg-2
+          div.col-lg-8
             h2.text-center You can choose the level of transition support depending on your requirements, capability, and bandwidth.
-          div.col-lg-3
+          div.col-lg-2
         div.container
           table.table.table-bordered
             tr
@@ -130,71 +123,40 @@ html
             h2.text-center There are clear benefits in working with optiBPO on your outsourcing strategy, being:
           div.col-lg-3
         div.row
-          div.col-lg-6
+          div.col-lg-6.benefit-list
             div.text-center
               img(src="/images/icon-homepage-established.png", alt="We establish")
             h3.text-center We establish
             p.text-center We host and help manage the roll out, including recruiting your team
-          div.col-lg-6
+          div.col-lg-6.benefit-list
             div.text-center
               img(src="/images/icon-homepage-full-control.png", alt="We establish")
             h3.text-center You retain full control
             p.text-center Resources will always work under your direction
         div.row
-          div.col-lg-6
+          div.col-lg-6.benefit-list
             div.text-center
               img(src="/images/icon-homepage-we-know.png", alt="We establish")
             h3.text-center We know the Philippines 
             p.text-center We have over 150 resources in Manila 
-          div.col-lg-6
+          div.col-lg-6.benefit-list
             div.text-center
               img(src="/images/icon-homepage-start-small.png", alt="We establish")
-            h3.text-center You can start small 
-            p.text-center The model works for single roles), and grow, allowing you to manage the risk, and prove the benefit
+            h3.text-center You can start small
+            div.col-lg-2
+            div.col-lg-8.text-center
+              p.text-center The model works for single roles), and grow, allowing you to manage the risk, and prove the benefit
         div.row
-          div.col-lg-6
+          div.col-lg-6.benefit-list
             div.text-center
               img(src="/images/icon-homepage-established.png", alt="We establish")
             h3.text-center We are experts 
             p.text-center We have expertise in setting up offshore accounting services 
-          div.col-lg-6
+          div.col-lg-6.benefit-list
             div.text-center
               img(src="/images/icon-homepage-investment.png", alt="We establish")
             h3.text-center Your initial investment is minimal 
             p.text-center Your ongoing costs are low and transparent 
-    section.contact-us-cta-section
-      div.container
-        div.row
-          div.col-lg-3
-          div.col-lg-6
-            h2.text-center optimising accounting outsourcing
-            p.text-center We will help you get started
-            div.text-center
-              a.primary-btn.btn(href="/contact-us") Contact us
-          div.col-lg-3
+    include ./layouts/footer-cta.jade
     div.blue-pattern
-    section.footer-section
-      div.container
-        div.row
-          div.col-lg-3
-            a.logo.navbar-brand(href="/") optiBPO 
-          div.col-lg-7
-            ul.list-inline
-              li
-                a(href="/about-us") How we work 
-              li
-                a(href="/about-us") Why Philippines 
-              li
-                a(href="/about-us") Pricing 
-              li
-                a(href="/about-us") Contact us 
-          div.col-lg-2
-            div.text-right
-              span.copy-right(href="/about-us") © 2014 optiBPO
-
-
-     
-  script(src='/bower_components/jquery/dist/jquery.min.js')
-  script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
-
-        
+    include ./layouts/footer.jade
