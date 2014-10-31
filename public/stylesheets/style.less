@@ -1,8 +1,206 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import "variables.less";
+/**
+*
+* Variables
+*
+**/
+
+@color-blue-dark : #262262;
+@color-blue : #25aae1;
+@color-gray : #474e5a; //text
+@color-white : #fff;
+@color-gray-lighter : #5a6d7d;
+
+/**
+*
+* Misc
+*
+**/
+
+.primary-btn {
+	background: @color-blue;
+	color: @color-white;
 }
 
-a {
-  color: #00B7FF;
+body {
+
 }
+
+.navbar {
+	z-index: 10;
+	padding-top: 26px;
+	border: none;
+	background: white;
+
+	ul {
+		margin-top: -3px;
+		// padding-left: 60px;
+
+		li {
+			font-weight: bold;
+		}
+	}
+}
+
+@media (min-width: @screen-md-min) {
+	.navbar {
+		background: url("/images/bg-header-gradient.png") repeat-x !important;
+		background-size: cover;
+
+		ul {
+			margin-top: -3px;
+			padding-left: 60px;
+
+			li {
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.logo {
+	overflow: hidden;
+	white-space: nowrap;
+	display: block; 
+	height: 48px; 
+	width: 226px;
+	background: url("/images/optiBPO-logo.png") no-repeat; 
+	text-indent: 100%;
+}
+
+.header-bg {
+	position: relative;
+	height: 640px;
+	background-size: cover;
+
+	.header-text {
+		position: relative;
+		top: 150px;
+
+		h2 {
+			font-size: 36pt; 
+			color: @color-blue-dark;
+		}
+		p {
+			color: @color-gray;
+		}
+	}
+}
+
+@media (min-width: @screen-sm-min) { 
+	.header-bg{
+		top: -100px;
+	}
+}
+
+#homepage {
+	background: url("/images/bg-homepage-header.jpg") center center  no-repeat;	
+}
+
+.transition-section {
+	background: #ebf0f4 url("/images/bg-homepage-pattern-gray.png");
+
+	h2 {
+		color: @color-blue-dark;
+		font-size: 19pt;
+	}
+
+	table {
+		background: #fff;
+
+		ul {
+			li {
+				color: #434c53;
+
+				font-size: 10pt;
+			}
+		}
+	}
+
+	.check {
+		background: url("/images/icon-check.png") no-repeat;
+		height: 43px;
+		width: 32px;
+		display: block;
+		margin: 0 auto;
+		overflow: hidden;
+		white-space: nowrap;
+		text-indent: 100%;
+	}
+
+	h4 {
+		color: @color-blue-dark;
+	}
+}
+
+.model-section {
+	position: relative;
+	top: 0;
+
+	h2 {
+		color: @color-blue-dark;
+		font-size: 19pt;
+	}
+}
+
+@media (min-width: @screen-sm-min) { 
+	.model-section {
+		position: relative;
+		top: -70px;
+	}
+}
+
+
+.benefits-section {
+	padding: 40px 0;
+
+	h2 {
+		color: @color-blue-dark;
+		font-size: 19pt;
+	}
+
+	h3 {
+		color: @color-blue;
+		font-size: 14pt;
+	}
+
+	p {
+		color: @color-gray-lighter;
+	}
+}
+
+.contact-us-cta-section {
+	padding: 40px 0;
+	border-top: 1px solid #d9e0e8;
+}
+
+.blue-pattern {
+	background: url("/images/bg-homepage-pattern.png");
+	height: 180px;
+	min-height: 180px;
+
+}
+
+.footer-section {
+	padding: 40px 0;
+
+	ul {
+		position: relative;
+		top: 10px;
+		li {
+			margin-right: 6px;
+			a {
+				font-weight: bold;
+				font-size: 10pt;
+			}
+		}
+	}
+
+	.copy-right {
+		color: @color-gray-lighter;
+	}
+}
+
+
+
+
