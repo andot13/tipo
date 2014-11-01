@@ -41,7 +41,6 @@ body {
 
 	ul {
 		margin-top: -3px;
-		// padding-left: 60px;
 
 		li {
 			font-weight: bold;
@@ -130,18 +129,36 @@ body {
 // How we work 
 #how-we-work {
 	.header-logo { 
-		background: url("/images/optiBPO-logo-white.png") no-repeat; 
+		background: url("/images/optiBPO-logo.png") no-repeat; 
 	}
 
+	@media (min-width: @screen-md-min) {
+		.header-logo { 
+			background: url("/images/optiBPO-logo-white.png") no-repeat; 
+		}
+	}
+	
 	.navbar {
 		ul {
 			li {
 				a {
-					color: @color-white;
+					color: #282828;
 				}
 			}
 		}
-	}	
+	}
+
+	@media (min-width: @screen-md-min) {
+		.navbar {
+			ul {
+				li {
+					a {
+						color: @color-white;
+					}
+				}
+			}
+		}
+	}
 
 	#how-we-work-bg-image {
 		background: url("/images/bg-how-we-work-header.jpg") center center no-repeat;	
@@ -209,6 +226,86 @@ body {
 
 }
 
+// Pricing
+#pricing {
+	.header-logo { 
+		background: url("/images/optiBPO-logo.png") no-repeat; 
+	}
+
+	@media (min-width: @screen-md-min) {
+		.header-logo { 
+			background: url("/images/optiBPO-logo-white.png") no-repeat; 
+		}
+	}
+
+	.navbar {
+		ul {
+			li {
+				a {
+					color: #282828;
+				}
+			}
+		}
+	}
+
+	@media (min-width: @screen-md-min) {
+		.navbar {
+			ul {
+				li {
+					a {
+						color: @color-white;
+					}
+				}
+			}
+		}
+	}
+
+	#pricing-bg-image {
+		background: url("/images/bg-pricing-header.jpg") center center no-repeat;	
+
+		h2 {
+			color: @color-white;
+		}
+
+		p {
+			font-family: @font-family-primary;
+			color: @color-white;
+		}
+	}
+
+	.pricing-section {
+
+		h1 {
+			color: @color-gray-lighter;
+			font-weight: normal;
+			font-size: 15pt;
+			line-height: 36px;
+			padding-bottom: 40px;
+
+		}
+
+		h2 {
+			font-size: 11pt;
+			color: @color-blue-dark;
+			text-transform: uppercase;
+			font-weight: bold;
+			letter-spacing: 1px;
+			padding-bottom: 30px;
+		}
+
+		p {
+			color: @color-gray-lighter;	
+			line-height: 26px;
+		}
+	}
+
+	.img-equals {
+		position: relative;
+		top: 10px;
+	}
+}
+
+
 .transition-section {
 	padding: 40px 0;
 	background: #ebf0f4 url("/images/bg-homepage-pattern-gray.png");
@@ -253,7 +350,7 @@ body {
 	position: relative;
 	top: 0;
 
-	h2 {
+	.model-text {
 		font-family: @font-family-primary;
 		line-height: 34px;
 		color: @color-blue-dark;
@@ -301,14 +398,14 @@ body {
 		font-family: @font-family-primary;
 		font-weight: bold;
 		line-height: 34px;
-		color: #5a6d7d;
+		color: @color-gray-lighter;
 	}
 
 	p {
 		font-family: @font-family-primary;
 		line-height: 34px;
 		font-size: 13pt;
-		color: #5a6d7d;
+		color: @color-gray-lighter;
 	}
 }
 
