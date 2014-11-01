@@ -14,4 +14,8 @@ router.get('/pricing', function(req, res) {
   res.render('pricing.jade', { title: 'Pricing', id: 'pricing'});
 });
 
+router.get('/why-philippines', function(req, res) {
+  res.render('why-philippines.jade', { title: 'Why Philippines', id: 'why-philippines'});
+});
+
 module.exports = router;
