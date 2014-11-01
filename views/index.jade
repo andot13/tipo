@@ -1,24 +1,6 @@
 include ./layouts/header.jade
-    nav.navbar.navbar-default(role="navigation")
-      div.container
-        div.navbar-header
-          button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.logo.navbar-brand(href="/") optiBPO 
-        div.navbar-collapse.collapse
-          ul.nav.navbar-nav
-            li
-              a(href="/about-us") How we work 
-            li
-              a(href="/why-philippines") Why Philippines 
-            li
-              a(href="/pricing") Pricing
-            li
-              a(href="/contact-us") Contact us 
-    section.header-bg#homepage
+    include ./layouts/nav.jade
+    section.header-bg#homepage-bg-image
       div.container-fluid
         div.row
           div.header-text

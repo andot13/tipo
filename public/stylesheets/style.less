@@ -20,6 +20,10 @@
 *
 **/
 
+.img-right {
+	float: right;
+}
+
 .primary-btn {
 	background: @color-blue;
 	color: @color-white;
@@ -64,7 +68,7 @@ body {
 	}
 }
 
-.logo {
+.header-logo {
 	overflow: hidden;
 	white-space: nowrap;
 	display: block; 
@@ -114,8 +118,95 @@ body {
 	}
 }
 
+// Homepage 
 #homepage {
-	background: url("/images/bg-homepage-header.jpg") center center  no-repeat;	
+
+	#homepage-bg-image {
+		background: url("/images/bg-homepage-header.jpg") center center no-repeat;	
+	}
+}
+
+
+// How we work 
+#how-we-work {
+	.header-logo { 
+		background: url("/images/optiBPO-logo-white.png") no-repeat; 
+	}
+
+	.navbar {
+		ul {
+			li {
+				a {
+					color: @color-white;
+				}
+			}
+		}
+	}	
+
+	#how-we-work-bg-image {
+		background: url("/images/bg-how-we-work-header.jpg") center center no-repeat;	
+
+		h2 {
+			color: @color-white;
+		}
+
+		p {
+			font-family: @font-family-primary;
+			color: @color-white;
+		}
+	}
+
+	.how-list-item {
+		padding: 80px 0;
+		border-bottom: 1px solid #d9e0e8;
+
+		h2 {
+			font-family: @font-family-primary;
+			line-height: 43px;
+			color: @color-blue-dark;
+		}
+	}
+
+	.supported-by-us-container {
+		.supported-text {
+			font-family: @font-family-primary;
+			font-size: 14pt;
+			text-transform: uppercase;
+		}
+	}
+
+	@media (min-width: @screen-sm-min) { 
+		.supported-by-us-container {
+			position: relative;
+			top: -70px;
+		}
+	}
+
+	.provided-by-you-container {
+		padding: 40px 0;
+		background: @color-blue-dark;
+
+		.how-list-item {
+			border-bottom: 1px solid @color-blue;
+		}
+
+		h2 {
+			color: @color-white;
+			padding-bottom: 14px;
+		}
+
+		p {
+			color: white;
+			line-height: 26px;
+		}
+
+		.provided-text {
+			font-family: @font-family-primary;
+			font-size: 14pt;
+			text-transform: uppercase;
+		}
+	}
+
 }
 
 .transition-section {
@@ -123,8 +214,10 @@ body {
 	background: #ebf0f4 url("/images/bg-homepage-pattern-gray.png");
 
 	h2 {
+		font-family: @font-family-primary;
+		line-height: 34px;
 		color: @color-blue-dark;
-		font-size: 19pt;
+		font-size: 18pt;
 		padding-bottom: 44px;
 	}
 
@@ -161,8 +254,10 @@ body {
 	top: 0;
 
 	h2 {
+		font-family: @font-family-primary;
+		line-height: 34px;
 		color: @color-blue-dark;
-		font-size: 19pt;
+		font-size: 18pt;
 	}
 }
 
@@ -173,13 +268,14 @@ body {
 	}
 }
 
-
 .benefits-section {
 	padding: 40px 0;
 
 	h2 {
+		font-family: @font-family-primary;
+		line-height: 34px;
 		color: @color-blue-dark;
-		font-size: 19pt;
+		font-size: 18pt;
 		padding-bottom: 44px;
 	}
 
@@ -200,6 +296,20 @@ body {
 .contact-us-cta-section {
 	padding: 40px 0;
 	border-top: 1px solid #d9e0e8;
+
+	h2 {
+		font-family: @font-family-primary;
+		font-weight: bold;
+		line-height: 34px;
+		color: #5a6d7d;
+	}
+
+	p {
+		font-family: @font-family-primary;
+		line-height: 34px;
+		font-size: 13pt;
+		color: #5a6d7d;
+	}
 }
 
 .blue-pattern {
@@ -211,6 +321,16 @@ body {
 
 .footer-section {
 	padding: 40px 0;
+
+	.footer-logo {
+		overflow: hidden;
+		white-space: nowrap;
+		display: block; 
+		height: 48px; 
+		width: 226px;
+		background: url("/images/optiBPO-logo.png") no-repeat; 
+		text-indent: 100%;
+	}
 
 	ul {
 		position: relative;
