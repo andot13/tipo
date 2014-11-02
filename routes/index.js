@@ -18,4 +18,8 @@ router.get('/why-philippines', function(req, res) {
   res.render('why-philippines.jade', { title: 'Why Philippines', id: 'why-philippines'});
 });
 
+router.get('/contact-us', function(req, res) {
+  res.render('contact-us.jade', { title: 'Contact us', id: 'contact-us'});
+});
+
 module.exports = router;

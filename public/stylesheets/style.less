@@ -29,6 +29,7 @@
 	color: @color-white;
 }
 
+
 body {
 
 }
@@ -132,6 +133,12 @@ body {
 		background: url("/images/bg-why-philippines-header.jpg") center center no-repeat;	
 	}
 
+	.why-text {
+		font-family: @font-family-primary;
+		font-size: 14pt;
+		text-transform: uppercase;
+	}
+
 	.why-list-item {
 		padding: 40px 0;
 		border-bottom: 1px solid #d9e0e8;
@@ -143,7 +150,84 @@ body {
 			color: @color-blue-dark;
 		}
 	}
-}
+
+	.bpo-in-ph-container {
+		padding: 40px 0;
+		background: @color-blue-dark;
+
+		h2 {
+			color: @color-white;
+		}
+		ul {
+			list-style: none;
+			li {
+				display: relative;
+				color: @color-white;
+				margin: 40px 0;
+				font-size: 12pt;
+
+				.bpo-why-list {
+					display: block;
+					width: 32px; 
+					height: 32px;
+					margin-right: 20px;
+					float: left;
+				}
+			}
+		}
+	}
+
+	#bpo-in-ph-list-1 {
+		background: url("/images/icon-why-ph-bpo.png") no-repeat;
+	}
+
+	#bpo-in-ph-list-2 {
+		background: url("/images/icon-why-ph-knowledge.png") no-repeat;
+	}
+
+	#bpo-in-ph-list-3 {
+		background: url("/images/icon-why-ph-literacy.png") no-repeat;
+	}
+
+	#bpo-in-ph-list-4 {
+		background: url("/images/icon-why-ph-labor.png") no-repeat;
+	}
+
+	#bpo-in-ph-list-5 {
+		background: url("/images/icon-why-ph-sustained.png") no-repeat;
+	}
+
+	#bpo-in-ph-list-6 {
+		background: url("/images/icon-why-ph-speaking.png") no-repeat;
+	}
+	
+	#bpo-in-ph-list-7 {
+		background: url("/images/icon-why-ph-graduate.png") no-repeat;
+	}
+
+	.asian-growth-container {
+		padding: 40px 0;
+
+		h2 {
+			color: @color-gray;
+		}
+		h3 {
+			color: @color-blue-dark;
+			font-weight: normal;
+			font-size: 14pt;
+		}
+
+		p {
+			color: @color-gray-lighter;
+		}
+	}
+
+	.next-asian-list {
+		padding: 30px 0;
+	}
+
+	
+} 
 
 
 
@@ -466,6 +550,131 @@ body {
 		color: @color-gray-lighter;
 	}
 }
+
+//Contact us
+#contact-us {
+	.header-logo { 
+		background: url("/images/optiBPO-logo.png") no-repeat; 
+	}
+
+	@media (min-width: @screen-md-min) {
+		.header-logo { 
+			background: url("/images/optiBPO-logo-white.png") no-repeat; 
+		}
+	}
+
+	.navbar {
+		ul {
+			li {
+				a {
+					color: #282828;
+				}
+			}
+		}
+	}
+
+	@media (min-width: @screen-md-min) {
+		.navbar {
+			ul {
+				li {
+					a {
+						color: @color-white;
+					}
+				}
+			}
+		}
+	}
+
+	#contact-us-bg-image {
+		background: url("/images/bg-contact-us-header.jpg") center center no-repeat;	
+
+		h2 {
+			color: @color-white;
+		}
+
+		p {
+			font-family: @font-family-primary;
+			color: @color-white;
+		}
+	}
+
+	.contact-form {
+		input,textarea {
+			border: none;
+			border-radius: 0;
+			margin: 15px 0;
+			padding: 15px;
+		}
+
+		.contact-submit {
+			padding: 10px;
+			font-size: 13pt;
+		}
+
+		.contact-submit {
+			background: @color-blue;
+			border: none; 
+			color: @color-white;
+		}
+
+		::-webkit-input-placeholder { /* WebKit browsers */
+		    color: @color-blue;
+		}
+
+		:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		    color: @color-blue;
+		}
+
+		::-moz-placeholder { /* Mozilla Firefox 19+ */
+		    color: @color-blue;
+		}
+
+		:-ms-input-placeholder { /* Internet Explorer 10+ */
+		    color: @color-blue;
+		}
+
+	}
+
+	.our-office-section {
+		.our-office-text {
+			font-family: @font-family-primary;
+			font-size: 14pt;
+			text-transform: uppercase;
+		}
+
+		.name {
+			color: @color-blue-dark;
+			font-size: 15pt;
+			font-weight: normal;
+		}
+
+		.title {
+			color: @color-gray-lighter;
+			font-weight: bold;
+			font-weight: normal;
+			margin-bottom: 30px;
+		}
+
+		.address {
+			font-family: @font-family-tertiary;
+			color: @color-gray-lighter;
+			font-size: 13pt;
+		}	
+
+		.phone-number {
+			color: @color-blue;
+			font-family: @font-family-tertiary;
+			font-size: 12pt;
+		}
+
+		#map-canvas {
+			width: 100%;
+			height: 500px;
+		}
+
+	}
+}
+
 
 
 
