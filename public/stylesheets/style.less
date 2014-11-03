@@ -20,9 +20,6 @@
 *
 **/
 
-.img-right {
-	float: right;
-}
 
 .primary-btn {
 	background: @color-blue;
@@ -86,13 +83,13 @@ body {
 
 	.header-text {
 		position: relative;
-		top: 180px;
+		top: 80px;
 
 		h2 {
 			font-family: @font-family-primary;
 			font-weight: bold;
-			font-size: 36pt; 
-			line-height: 60px;
+			font-size: 30pt; 
+			line-height: 56px;
 			color: @color-blue-dark;
 			padding-bottom: 10px;
 
@@ -107,7 +104,25 @@ body {
 
 		.how-we-work-btn {
 			font-family: @font-family-primary;
-			font-size: 12pt;
+			font-size: 10pt;
+		}
+	}
+}
+
+@media (min-width: @screen-sm-min) { 
+	.header-bg{
+		.header-text {
+			top: 180px;
+
+			h2 {
+				font-size: 36pt;
+				line-height: 60px;
+			}
+
+			.how-we-work-btn {
+				font-family: @font-family-primary;
+				font-size: 12pt;
+			}
 		}
 	}
 }
@@ -122,7 +137,48 @@ body {
 #homepage {
 
 	#homepage-bg-image {
-		background: url("/images/bg-homepage-header.jpg") center center no-repeat;	
+		background: url("/images/bg-homepage-header-sm.jpg") center center no-repeat;	
+
+		.header-text {
+			p {
+				color: @color-white;
+			}
+		}
+	}
+
+	@media (min-width: @screen-sm-min) { 
+		#homepage-bg-image {
+			background: url("/images/bg-homepage-header.jpg") center center no-repeat;	
+
+			.header-text {
+				p {
+					color: @color-gray;
+				}
+			}
+		}
+	}
+
+	@media (min-width: @screen-xs-min) { 
+		#homepage-bg-image {
+			.header-text {
+				p {
+					color: @color-gray;
+				}
+			}
+		}
+	}
+
+	.img-model {
+		padding: 20px 0;
+	}
+
+	.model-section {
+		p {
+			font-family: @font-family-tertiary;
+			font-size: 13pt;
+			line-height: 30px;
+			color: @color-gray-lighter;
+		}
 	}
 }
 
@@ -130,7 +186,13 @@ body {
 #why-philippines{
 
 	#why-philippines-bg-image {
-		background: url("/images/bg-why-philippines-header.jpg") center center no-repeat;	
+		background: url("/images/bg-why-philippines-header-sm.jpg") center center no-repeat;	
+	}
+
+	@media (min-width: @screen-sm-min) { 
+		#why-philippines-bg-image {
+			background: url("/images/bg-why-philippines-header.jpg") center center no-repeat;	
+		}
 	}
 
 	.why-text {
@@ -146,9 +208,38 @@ body {
 		h2 {
 			font-family: @font-family-primary;
 			font-size: 19pt;
+			text-align: center;
 			line-height: 43px;
 			color: @color-blue-dark;
 		}
+
+		p {
+			text-align: center;
+		}
+
+		img {
+			margin: 0 auto;
+			display: block;
+		}
+	}
+
+	@media (min-width: @screen-sm-min) {
+		.why-list-item {
+			padding: 80px 0;
+			border-bottom: 1px solid #d9e0e8;
+
+			h2 {
+				font-family: @font-family-primary;
+				font-size: 21pt;
+				text-align: left;
+				line-height: 43px;
+				color: @color-blue-dark;
+			}
+
+			p {
+				text-align: left;
+			}
+		}	
 	}
 
 	.bpo-in-ph-container {
@@ -233,8 +324,15 @@ body {
 
 // How we work 
 #how-we-work {
-	.header-logo { 
-		background: url("/images/optiBPO-logo.png") no-repeat; 
+
+	#how-we-work-bg-image {
+		background: url("/images/bg-how-we-work-header-sm.jpg") center center no-repeat;	
+	}
+
+	@media (min-width: @screen-sm-min) { 
+		#how-we-work-bg-image {
+			background: url("/images/bg-how-we-work-header.jpg") center center no-repeat;	
+		}
 	}
 
 	@media (min-width: @screen-md-min) {
@@ -266,8 +364,6 @@ body {
 	}
 
 	#how-we-work-bg-image {
-		background: url("/images/bg-how-we-work-header.jpg") center center no-repeat;	
-
 		h2 {
 			color: @color-white;
 		}
@@ -284,9 +380,44 @@ body {
 
 		h2 {
 			font-family: @font-family-primary;
+			font-size: 21pt;
+			text-align: center;
 			line-height: 43px;
 			color: @color-blue-dark;
 		}
+
+		p {
+			text-align: center;
+		}
+
+		img {
+			margin: 0 auto;
+			display: block;
+		}
+
+		.img-right {
+			margin: 0 auto !important;
+			display: block !important;
+		}
+	}
+
+	@media (min-width: @screen-sm-min) {
+		.how-list-item {
+			padding: 80px 0;
+			border-bottom: 1px solid #d9e0e8;
+
+			h2 {
+				font-family: @font-family-primary;
+				font-size: 21pt;
+				text-align: left;
+				line-height: 43px;
+				color: @color-blue-dark;
+			}
+
+			p {
+				text-align: left;
+			}
+		}	
 	}
 
 	.supported-by-us-container {
@@ -328,13 +459,19 @@ body {
 			text-transform: uppercase;
 		}
 	}
-
 }
 
 // Pricing
 #pricing {
-	.header-logo { 
-		background: url("/images/optiBPO-logo.png") no-repeat; 
+
+	#pricing-bg-image {
+		background: url("/images/bg-pricing-header-sm.jpg") center center no-repeat;	
+	}
+
+	@media (min-width: @screen-sm-min) { 
+		#pricing-bg-image {
+			background: url("/images/bg-pricing-header.jpg") center center no-repeat;	
+		}
 	}
 
 	@media (min-width: @screen-md-min) {
@@ -366,7 +503,6 @@ body {
 	}
 
 	#pricing-bg-image {
-		background: url("/images/bg-pricing-header.jpg") center center no-repeat;	
 
 		h2 {
 			color: @color-white;
@@ -407,6 +543,25 @@ body {
 	.img-equals {
 		position: relative;
 		top: 10px;
+		display: none;
+	}
+
+	.img-plus {
+		display: none;
+	}
+
+	@media (min-width: @screen-sm-min) { 
+		.img-plus {
+			display: block;
+		}
+
+		.img-equals {
+			display: block;
+		}
+	}
+
+	.img-right {
+		float: right;
 	}
 }
 
@@ -542,19 +697,37 @@ body {
 			a {
 				font-weight: bold;
 				font-size: 10pt;
+				color: @color-blue;
 			}
 		}
 	}
 
 	.copy-right {
 		color: @color-gray-lighter;
+		position: relative;
+		top:10px;
 	}
 }
 
 //Contact us
 #contact-us {
-	.header-logo { 
-		background: url("/images/optiBPO-logo.png") no-repeat; 
+
+	#contact-us-bg-image {
+		background: url("/images/bg-contact-us-header-sm.jpg") center center no-repeat;	
+		height: 700px;
+	}
+
+	@media (min-width: @screen-sm-min) { 
+		#contact-us-bg-image {
+			background: url("/images/bg-contact-us-header.jpg") center center no-repeat;	
+			height: 640px;
+		}
+	}
+
+	@media (min-width: @screen-sm-min) { 
+		#contact-us-bg-image {
+			background: url("/images/bg-contact-us-header.jpg") center center no-repeat;	
+		}
 	}
 
 	@media (min-width: @screen-md-min) {
@@ -586,7 +759,6 @@ body {
 	}
 
 	#contact-us-bg-image {
-		background: url("/images/bg-contact-us-header.jpg") center center no-repeat;	
 
 		h2 {
 			color: @color-white;
@@ -599,6 +771,7 @@ body {
 	}
 
 	.contact-form {
+
 		input,textarea {
 			border: none;
 			border-radius: 0;
@@ -632,10 +805,11 @@ body {
 		:-ms-input-placeholder { /* Internet Explorer 10+ */
 		    color: @color-blue;
 		}
-
 	}
 
 	.our-office-section {
+		margin-top: 80px; 
+
 		.our-office-text {
 			font-family: @font-family-primary;
 			font-size: 14pt;
@@ -672,6 +846,15 @@ body {
 			height: 500px;
 		}
 
+		.contact-person {
+			padding-bottom: 40px;
+		}
+	}
+
+	@media (min-width: @screen-sm-min) {
+		.our-office-section {
+			margin-top: 0px;
+		}
 	}
 }
 
