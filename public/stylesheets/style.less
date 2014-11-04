@@ -25,10 +25,14 @@
 	background: @color-blue;
 	color: @color-white;
 }
-
+.hidden-elem {
+     opacity:0;
+}
+.visible-elem {
+     opacity:1;
+}
 
 body {
-
 }
 
 .navbar {
@@ -45,8 +49,6 @@ body {
 		}
 	}
 }
-
-
 
 @media (min-width: @screen-md-min) {
 	.navbar {
@@ -182,6 +184,7 @@ body {
 	}
 }
 
+
 // Why Philippines
 #why-philippines{
 
@@ -316,10 +319,7 @@ body {
 	.next-asian-list {
 		padding: 30px 0;
 	}
-
-	
 } 
-
 
 
 // How we work 
@@ -460,6 +460,7 @@ body {
 		}
 	}
 }
+
 
 // Pricing
 #pricing {
@@ -657,15 +658,20 @@ body {
 	h2 {
 		font-family: @font-family-primary;
 		font-weight: bold;
-		line-height: 34px;
 		color: @color-gray-lighter;
 	}
 
 	p {
 		font-family: @font-family-primary;
-		line-height: 34px;
-		font-size: 13pt;
+		font-size: 12pt;
 		color: @color-gray-lighter;
+	}
+
+	.contact-us-btn {
+		margin-top: 15px;
+		padding: 10px 50px;
+		font-size: 11pt;
+		font-weight: normal;
 	}
 }
 
@@ -708,6 +714,7 @@ body {
 		top:10px;
 	}
 }
+
 
 //Contact us
 #contact-us {
