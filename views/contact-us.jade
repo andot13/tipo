@@ -9,7 +9,7 @@ include ./layouts/header.jade
               p We love to hear from you so please don't hesitate to get in touch. We promise to respond within 12 hours of receiving your message!
             div.contact-form
               div.col-sm-4.col-md-4.col-lg-4
-                form.contact-form.form-horizontal
+                form.contact-form.form-horizontal(action="/contact-us", name="contact-us", method="post")
                   div.form-group
                   input.form-control(placeholder="Name")
                   input.form-control(type="email" placeholder="Email")
