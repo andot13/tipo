@@ -13,6 +13,9 @@ module.exports = function(grunt){
 			development: {
 				files: {
 				  'public/stylesheets/style.css': 'public/stylesheets/style.less'
+				},
+				option: {
+					livereload: true,
 				}
 	  		},
 
@@ -23,6 +26,9 @@ module.exports = function(grunt){
 
 				files: {
 				  	'public/stylesheets/style.css': 'public/stylesheets/style.less'
+				},
+				option: {
+					livereload: true,
 				}
 	  		}
 		},
