@@ -1,7 +1,7 @@
 include ./layouts/header.jade
     include ./layouts/nav.jade
     section.header-bg#homepage-bg-image
-      div.container-fluid
+      div.container
         div.row
           div.header-text
             div.col-sm-8.col-md-8.col-lg-6.col-lg-offset-1
@@ -26,7 +26,7 @@ include ./layouts/header.jade
           div.col-lg-8.col-lg-offset-2
             h2.text-center You can choose the level of transition support depending on your requirements, capability, and bandwidth.
         div.container
-          div.table-responsive
+          div.homepage-table.table-responsive
             table.table.table-bordered
               tr
                 td  
@@ -97,45 +97,44 @@ include ./layouts/header.jade
     section.benefits-section
       div.container
         div.row
-          div.col-lg-3
-          div.col-lg-6
+          div.col-lg-8.col-lg-offset-2
             h2.text-center There are clear benefits in working with optiBPO on your outsourcing strategy, being:
-          div.col-lg-3
         div.row
-          div.col-sm-6.col-md-6.col-lg-6.benefit-list
-            div.text-center
-              img(src="/images/icon-homepage-established.png", alt="We establish")
-            h3.text-center We establish
-            p.text-center We host and help manage the roll out, including recruiting your team
-          div.col-sm-6.col-md-6.col-lg-6.benefit-list
-            div.text-center
-              img(src="/images/icon-homepage-full-control.png", alt="We establish")
-            h3.text-center You retain full control
-            p.text-center Resources will always work under your direction
+          div.benefit-list
+            div.col-sm-6.col-md-6.col-lg-5.col-lg-offset-1
+              div.text-center
+                img(src="/images/icon-homepage-established.png", alt="We establish")
+              h3.text-center We establish
+              p.text-center We host and help manage the roll out, including recruiting your team
+            div.col-sm-6.col-md-6.col-lg-6
+              div.text-center
+                img(src="/images/icon-homepage-full-control.png", alt="We establish")
+              h3.text-center You retain full control
+              p.text-center Resources will always work under your direction
         div.row
-          div.col-sm-6.col-md-6.col-lg-6.benefit-list
-            div.text-center
-              img(src="/images/icon-homepage-we-know.png", alt="We establish")
-            h3.text-center We know the Philippines 
-            p.text-center We have over 150 resources in Manila 
-          div.col-sm-6.col-md-6.col-lg-6.benefit-list
-            div.text-center
-              img(src="/images/icon-homepage-start-small.png", alt="We establish")
-            h3.text-center You can start small
-            div.col-lg-2
-            div.col-lg-8.text-center
+          div.benefit-list
+            div.col-sm-6.col-md-6.col-lg-5.col-lg-offset-1
+              div.text-center
+                img(src="/images/icon-homepage-we-know.png", alt="We establish")
+              h3.text-center We know the Philippines 
+              p.text-center We have over 150 resources in Manila 
+            div.col-sm-6.col-md-6.col-lg-4.col-lg-offset-1
+              div.text-center
+                img(src="/images/icon-homepage-start-small.png", alt="We establish")
+              h3.text-center You can start small
               p.text-center The model works for single roles), and grow, allowing you to manage the risk, and prove the benefit
         div.row
-          div.col-sm-6.col-md-6.col-lg-6.benefit-list
-            div.text-center
-              img(src="/images/icon-homepage-experts.png", alt="We establish")
-            h3.text-center We are experts 
-            p.text-center We have expertise in setting up offshore accounting services 
-          div.col-sm-6.col-md-6.col-lg-6.benefit-list
-            div.text-center
-              img(src="/images/icon-homepage-investment.png", alt="We establish")
-            h3.text-center Your initial investment is minimal 
-            p.text-center Your ongoing costs are low and transparent 
+          div.benefit-list
+            div.col-sm-6.col-md-6.col-lg-5.col-lg-offset-1
+              div.text-center
+                img(src="/images/icon-homepage-experts.png", alt="We establish")
+              h3.text-center We are experts 
+              p.text-center We have expertise in setting up offshore accounting services 
+            div.col-sm-6.col-md-6.col-lg-6
+              div.text-center
+                img(src="/images/icon-homepage-investment.png", alt="We establish")
+              h3.text-center Your initial investment is minimal 
+              p.text-center Your ongoing costs are low and transparent 
     include ./layouts/footer-cta.jade
     div.blue-pattern
     include ./layouts/footer.jade

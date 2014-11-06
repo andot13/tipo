@@ -114,11 +114,11 @@ body {
 @media (min-width: @screen-sm-min) { 
 	.header-bg{
 		.header-text {
-			top: 180px;
+			top: 160px;
 
 			h2 {
-				font-size: 36pt;
-				line-height: 60px;
+				font-size: 26pt;
+				line-height: 50px;
 			}
 
 			.how-we-work-btn {
@@ -128,6 +128,21 @@ body {
 		}
 	}
 }
+
+
+@media (min-width: @screen-lg-min) { 
+	.header-bg{
+		.header-text {
+			top: 180px;
+
+			h2 {
+				font-size: 30pt;
+				line-height: 55px;
+			}
+		}
+	}
+}
+
 
 @media (min-width: @screen-sm-min) { 
 	.header-bg{
@@ -148,6 +163,7 @@ body {
 			}
 		}
 	}
+
 
 	@media (min-width: @screen-sm-min) { 
 		#homepage-bg-image {
@@ -184,6 +200,19 @@ body {
 			color: @color-gray-lighter;
 		}
 	}
+
+	.homepage-table {
+		table {
+			ul {
+				margin-left: -10px;
+
+				li {
+					// font-size: 11pt;
+					margin: 5px 0;
+				}
+			}	
+		}
+	}
 }
 
 
@@ -204,7 +233,7 @@ body {
 
 	.why-text {
 		font-family: @font-family-primary;
-		font-size: 14pt;
+		font-size: 21pt;
 		text-transform: uppercase;
 	}
 
@@ -232,7 +261,7 @@ body {
 
 	@media (min-width: @screen-sm-min) {
 		.why-list-item {
-			padding: 80px 0;
+			padding: 40px 0;
 			border-bottom: 1px solid #d9e0e8;
 
 			h2 {
@@ -250,7 +279,7 @@ body {
 	}
 
 	.bpo-in-ph-container {
-		padding: 40px 0;
+		padding: 20px 0;
 		background: @color-blue-dark;
 
 		h2 {
@@ -304,7 +333,7 @@ body {
 	}
 
 	.asian-growth-container {
-		padding: 40px 0;
+		padding: 20px 0;
 
 		h2 {
 			color: @color-gray;
@@ -316,12 +345,12 @@ body {
 		}
 
 		p {
-			color: @color-gray-lighter;
+			color: @color-gray;
 		}
 	}
 
 	.next-asian-list {
-		padding: 30px 0;
+		padding: 20px 0;
 	}
 } 
 
@@ -381,7 +410,7 @@ body {
 	}
 
 	.how-list-item {
-		padding: 80px 0;
+		padding: 40px 0;
 		border-bottom: 1px solid #d9e0e8;
 
 		h2 {
@@ -409,7 +438,7 @@ body {
 
 	@media (min-width: @screen-sm-min) {
 		.how-list-item {
-			padding: 80px 0;
+			padding: 40px 0;
 			border-bottom: 1px solid #d9e0e8;
 
 			h2 {
@@ -429,7 +458,7 @@ body {
 	.supported-by-us-container {
 		.supported-text {
 			font-family: @font-family-primary;
-			font-size: 14pt;
+			font-size: 16pt;
 			text-transform: uppercase;
 		}
 	}
@@ -442,7 +471,7 @@ body {
 	}
 
 	.provided-by-you-container {
-		padding: 40px 0;
+		padding: 20px 0;
 		background: @color-blue-dark;
 
 		.how-list-item {
@@ -461,7 +490,7 @@ body {
 
 		.provided-text {
 			font-family: @font-family-primary;
-			font-size: 14pt;
+			font-size: 16pt;
 			text-transform: uppercase;
 		}
 	}
@@ -647,17 +676,20 @@ body {
 
 	h3 {
 		color: @color-blue;
-		font-size: 14pt;
+		font-size: 17pt;
 	}
 
 	p {
-		color: @color-gray-lighter;
+		color: @color-gray;
+		font-size: 14pt;
 	}
 
 	.benefit-list {
 		padding: 20px 0;
+		overflow: hidden;
 	}
 }
+
 
 .contact-us-cta-section {
 	padding: 40px 0;
@@ -729,21 +761,15 @@ body {
 
 	#contact-us-bg-image {
 		background: url("/images/bg-contact-us-header-sm.jpg") center center no-repeat;	
-		height: 700px;
+		height:700px;
 		background-size: cover;
 	}
 
 	@media (min-width: @screen-sm-min) { 
 		#contact-us-bg-image {
 			background: url("/images/bg-contact-us-header.jpg") center center no-repeat;	
-			height: 640px;
+			height: 540px;
 			background-size: cover;
-		}
-	}
-
-	@media (min-width: @screen-sm-min) { 
-		#contact-us-bg-image {
-			background: url("/images/bg-contact-us-header.jpg") center center no-repeat;	
 		}
 	}
 
@@ -825,11 +851,11 @@ body {
 	}
 
 	.our-office-section {
-		margin-top: 80px; 
 
 		.our-office-text {
 			font-family: @font-family-primary;
-			font-size: 14pt;
+			font-size: 21pt;
+			padding-bottom: 40px;
 			text-transform: uppercase;
 		}
 

@@ -54,12 +54,12 @@ include ./layouts/header.jade
             mapTypeId: google.maps.MapTypeId.ROADMAP
           }
           var map = new google.maps.Map(mapCanvas, mapOptions);
-          //- var icon = "https://maps.google.com/mapfiles/kml/shapes/schools_maps.png";
+          var icon = "http://optibpo.com/images/icon-contact-us-marker.png";
 
           new google.maps.Marker({
               position: location,
               map: map,
-              //- icon: icon
+              icon: icon
           });
       }
       google.maps.event.addDomListener(window, 'load', initialize);
