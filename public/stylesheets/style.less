@@ -80,7 +80,7 @@ body {
 .header-bg {
 	position: relative;
 	top: -19px;
-	height:540px;
+	height: 540px;
 	background-size: cover;
 
 	.header-text {
@@ -113,6 +113,8 @@ body {
 
 @media (min-width: @screen-sm-min) { 
 	.header-bg{
+		top: -100px;
+
 		.header-text {
 			top: 160px;
 
@@ -133,7 +135,7 @@ body {
 @media (min-width: @screen-lg-min) { 
 	.header-bg{
 		.header-text {
-			top: 180px;
+			top: 160px;
 
 			h2 {
 				font-size: 30pt;
@@ -143,12 +145,6 @@ body {
 	}
 }
 
-
-@media (min-width: @screen-sm-min) { 
-	.header-bg{
-		top: -100px;
-	}
-}
 
 // Homepage 
 #homepage {
@@ -233,7 +229,7 @@ body {
 
 	.why-text {
 		font-family: @font-family-primary;
-		font-size: 21pt;
+		font-size: 18pt;	
 		text-transform: uppercase;
 	}
 
@@ -458,7 +454,7 @@ body {
 	.supported-by-us-container {
 		.supported-text {
 			font-family: @font-family-primary;
-			font-size: 16pt;
+			font-size: 18pt;
 			text-transform: uppercase;
 		}
 	}
@@ -490,7 +486,7 @@ body {
 
 		.provided-text {
 			font-family: @font-family-primary;
-			font-size: 16pt;
+			font-size: 18pt;
 			text-transform: uppercase;
 		}
 	}
@@ -814,11 +810,43 @@ body {
 	}
 
 	.contact-form {
+		overflow: hidden;
+		position: relative;
+		top: -30px;
+
+		.message {
+			background: red;
+			overflow: hidden;
+			color: @color-white;
+			font-size: 10pt;
+			padding: 0 5px;
+			display: inline-block;
+			position: relative;
+			top: 16px;
+		}
+
+		.error {
+		    border: 2px solid #f00;
+		}
+
+		.valid {
+		    border: 2px solid @color-blue;
+		}
+
+		.success {
+			text-align: center;
+			font-size: 11pt;
+			background: #449D44;
+			color: lighten(#449D44, 10%);
+			border: 1px solid lighten(#449D44, 20%);
+			margin: 0;
+			padding: 5px 10px;
+		}
 
 		input,textarea {
 			border: none;
 			border-radius: 0;
-			margin: 15px 0;
+			margin: 10px 0;
 			padding: 15px;
 		}
 

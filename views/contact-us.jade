@@ -1,66 +1,78 @@
 include ./layouts/header.jade
-    include ./layouts/nav.jade
-    section.header-bg#contact-us-bg-image
-      div.container-fluid
-        div.row
-          div.header-text
-            div.col-sm-6.col-sm-offset-1.col-md-6.col-md-offset-1.col-lg-6.col-lg-offset-1
-              h2 Get in touch with us.
-              p We love to hear from you so please don't hesitate to get in touch. We promise to respond within 12 hours of receiving your message!
-            div.contact-form
-              div.col-sm-4.col-md-4.col-lg-4
-                form#contact-us-form.contact-form.form-horizontal(action="/contact-us", name="contact-us", method="post")
-                  div.form-group
-                  input#name.form-control(placeholder="Name" name="name")
-                  input#email.form-control(type="email" placeholder="Email" name="email")
-                  textarea#message.form-control(placeholder="Message", rows="5" name="message")
-                  button.contact-submit.btn.btn-block(type="submit") Submit
-    section.our-office-section.model-section
-      div.container
-        div.row
-          h2.our-office-text.text-center Our office
-          div.contact-person.col-sm-4.col-md-4.col-lg-4
-            strong.name Jamie Mcbrien
-            p.title Director, optiBPO
-            address.address Level 12 309 Kent Street Sydney NSW 2000
-            a.phone-number(href="callto:+61 2 8071 4155") +61 2 8071 4155
-          div.col-sm-8.col-md-8.col-lg-8
-            div#map-canvas
+		include ./layouts/nav.jade
+		section.header-bg#contact-us-bg-image
+			div.container-fluid
+				div.row
+					div.header-text
+						div.col-sm-6.col-sm-offset-1.col-md-6.col-md-offset-1.col-lg-6.col-lg-offset-1
+							h2 Get in touch with us.
+							p We love to hear from you so please don't hesitate to get in touch. We promise to respond within 12 hours of receiving your message!
+						- function isEmptyObject(obj) {
+						- 		var name;
+						-      for (name in obj) {
+						-        return false;
+						-      }
+						-      return true;
+						-    }
+						- if (isEmptyObject(errors) == false)
+							p.errorMessage= "The following errors occurred:"
+							ul  
+								- each error in errors
+									li= error.msg
+						-	else 
+						div.contact-form.col-sm-4.col-md-4.col-lg-4
+							p(class = successClass)=message 
+							form#contact-us-form(method="post" action="/contact-us")
+								input#name.form-control(type="text" placeholder="Name" name="name")
+								input#email.form-control(type="text" placeholder="Email" name="email")
+								textarea#message.form-control(placeholder="Message" name="message" rows="5")
+								input.contact-submit.btn.btn-block(type="submit")
+		section.our-office-section.model-section
+			div.container
+				div.row
+					h2.our-office-text.text-center Our office
+					div.contact-person.col-sm-4.col-md-4.col-lg-4
+						strong.name Jamie Mcbrien
+						p.title Director, optiBPO
+						address.address Level 12 309 Kent Street Sydney NSW 2000
+						a.phone-number(href="callto:+61 2 8071 4155") +61 2 8071 4155
+					div.col-sm-8.col-md-8.col-lg-8
+						div#map-canvas
 
-    div.blue-pattern
-    include ./layouts/footer.jade
-    script(src="https://maps.googleapis.com/maps/api/js")
-    script.
-      function initialize() {
-        var mapCanvas = document.getElementById('map-canvas');
+		div.blue-pattern
+		include ./layouts/footer.jade
+		script(src="https://maps.googleapis.com/maps/api/js")
+		script.
+			function initialize() {
+				var mapCanvas = document.getElementById('map-canvas');
 
-        
-        var mapOptions = {
-          center: new google.maps.LatLng(-33.8673199, 151.2043096),
-          zoom: 14,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
+				
+				var mapOptions = {
+					center: new google.maps.LatLng(-33.8673199, 151.2043096),
+					zoom: 14,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				}
 
-        var map = new google.maps.Map(mapCanvas, mapOptions, marker);
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
+				var map = new google.maps.Map(mapCanvas, mapOptions, marker);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
 
-      function initialize() {
-          var mapCanvas = document.getElementById('map-canvas');
-          var location = new google.maps.LatLng(-33.8673199, 151.2043096);
-          var mapOptions = {
-            center: location,
-            zoom: 15,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-          }
-          var map = new google.maps.Map(mapCanvas, mapOptions);
-          var icon = "http://optibpo.com/images/icon-contact-us-marker.png";
+			function initialize() {
+					var mapCanvas = document.getElementById('map-canvas');
+					var location = new google.maps.LatLng(-33.8673199, 151.2043096);
+					var mapOptions = {
+						center: location,
+						zoom: 15,
+						mapTypeId: google.maps.MapTypeId.ROADMAP
+					}
+					var map = new google.maps.Map(mapCanvas, mapOptions);
+					var icon = "http://optibpo.com/images/icon-contact-us-marker.png";
 
-          new google.maps.Marker({
-              position: location,
-              map: map,
-              icon: icon
-          });
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
+					new google.maps.Marker({
+							position: location,
+							map: map,
+							icon: icon
+					});
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
 
