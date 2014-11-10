@@ -24,7 +24,7 @@ router.get('/contact-us', function(req, res) {
 	res.render('contact-us.jade', { title: 'Contact us', id: 'contact-us'});
 });
 
-router.post('/contact-us', function(req, res) {
+router.post('/contact-send', function(req, res) {
 	req.assert('name', 'Please enter you name.').notEmpty();
 	req.assert('email', 'Please provide a valid email').isEmail();  
 
