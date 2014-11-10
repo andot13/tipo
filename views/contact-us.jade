@@ -22,7 +22,7 @@ include ./layouts/header.jade
 						-	else 
 						div.contact-form.col-sm-4.col-md-4.col-lg-4
 							p(class = successClass)=message 
-							form#contact-us-form(method="post" action="/contact-us")
+							form#contact-us-form(method="post" action="/contact-sent")
 								input#name.form-control(type="text" placeholder="Name" name="name")
 								input#email.form-control(type="text" placeholder="Email" name="email")
 								textarea#message.form-control(placeholder="Message" name="message" rows="5")
