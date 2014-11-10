@@ -38,35 +38,35 @@ router.post('/contact-sent', function(req, res) {
 			errors: {}
 		});
 
-			var name = req.body.name;
-			var email = req.body.email;
-			var message = req.body.message;
+			// var name = req.body.name;
+			// var email = req.body.email;
+			// var message = req.body.message;
 
-			var message = {
-			    "text": message,
-			    "subject": "optiBPO Contact Form Submission",
-			    "from_email": email,
-			    "from_name": name,
-			    "to": [{
-			            "email": "andotjackass@gmail.com",
-			            "name": "Andy"
-			        }],
-			    "headers": {
-			        "Reply-To": email
-			    },
-			    "track_opens": true,
-			    "track_clicks": true,
-			    "auto_text": true
-			};
+			// var message = {
+			//     "text": message,
+			//     "subject": "optiBPO Contact Form Submission",
+			//     "from_email": email,
+			//     "from_name": name,
+			//     "to": [{
+			//             "email": "andotjackass@gmail.com",
+			//             "name": "Andy"
+			//         }],
+			//     "headers": {
+			//         "Reply-To": email
+			//     },
+			//     "track_opens": true,
+			//     "track_clicks": true,
+			//     "auto_text": true
+			// };
 
-			mandrill_client.messages.send({"message": message}, function(result) {
-		    console.log(result);
+			// mandrill_client.messages.send({"message": message}, function(result) {
+		 //    console.log(result);
 		   
-			}, function(e) {
-			    // Mandrill returns the error as an object with name and message keys
-			    console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
-			    // A mandrill error occurred: Unknown_Subaccount - No subaccount exists with the id 'customer-123'
-			});
+			// }, function(e) {
+			//     // Mandrill returns the error as an object with name and message keys
+			//     console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
+			//     // A mandrill error occurred: Unknown_Subaccount - No subaccount exists with the id 'customer-123'
+			// });
 	}
 	else {   //Display errors to user
 		res.render('contact-us.jade', { 
