@@ -25,12 +25,25 @@ router.get('/contact-us', function(req, res) {
 });
 
 router.post('/contact-us', function(req, res) {
+	// req.assert('name', 'Please enter you name.').notEmpty();
+	// req.assert('email', 'Please provide a valid email').isEmail();  
+
+	// var errors = req.validationErrors();  
+	// if( !errors){   //No errors were found.  Passed Validation!
+	// 	res.render('/contact-us'), { 
+	// 		title: 'Contact us',
+	// 		message: 'Thank you! Your message has been sent!',
+	// 		id: 'contact-us',
+	// 		successClass : 'success',
+	// 		errors: {}
+	// 	});
+
 	var name = req.body.name;
 	var email = req.body.email;
-	var message = req.body.message;
+	var postMessage = req.body.message;
 
 	var message = {
-	    "text": message,
+	    "text": postMessage,
 	    "subject": "optiBPO Contact Form Submission",
 	    "from_email": email,
 	    "from_name": name,
@@ -54,6 +67,16 @@ router.post('/contact-us', function(req, res) {
 	    console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
 	    // A mandrill error occurred: Unknown_Subaccount - No subaccount exists with the id 'customer-123'
 	});
+	// }
+	// else {   //Display errors to user
+	// 	res.render('/contact-us', { 
+	// 		title: 'Contact us',
+	// 		message: 'There seems to be an error. Please try again',
+	// 		id: 'contact-us',
+	// 		message: 'Error!',
+	// 		errors: errors
+	// 	});
+	// }
 });
 
 

@@ -22,14 +22,15 @@ $(document).ready(function() {
 			offset = element.offset();
 		},
 		submitHandler: function (form) {
-			$("#success").html("Thank you! Your message has been sent.").fadeIn();
-			$("#name, #email, #message").val("");
-
 			$.ajax({
 				type: $(form).attr('method'),
 				url: $(form).attr('action'),
 				data: $(form).serialize(),
-				dataType : 'json'
+				timeout: 400,
+				complete: function() {
+					$("#success").html("Thank you! Your message has been sent.").fadeIn();
+					$("#name, #email, #message").val("");
+				}
 			});
 			
 			return false; // required to block normal submit since you used ajax
