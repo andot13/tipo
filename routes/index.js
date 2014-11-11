@@ -30,13 +30,14 @@ router.post('/contact-us', function(req, res) {
 
 	var errors = req.validationErrors();  
 	if( !errors){   //No errors were found.  Passed Validation!
-		res.render('contact-us.jade', { 
-			title: 'Contact us',
-			message: 'Thank you! Your message has been sent!',
-			id: 'contact-us',
-			successClass : 'success',
-			errors: {}
-		});
+		res.redirect('/contact-us');
+		// , { 
+		// 	title: 'Contact us',
+		// 	message: 'Thank you! Your message has been sent!',
+		// 	id: 'contact-us',
+		// 	successClass : 'success',
+		// 	errors: {}
+		// });
 
 			var name = req.body.name;
 			var email = req.body.email;
@@ -69,13 +70,14 @@ router.post('/contact-us', function(req, res) {
 			});
 	}
 	else {   //Display errors to user
-		res.render('contact-us.jade', { 
-			title: 'Contact us',
-			message: 'There seems to be an error. Please try again',
-			id: 'contact-us',
-			message: 'Error!',
-			errors: errors
-		});
+		res.redirect('/contact-us');
+		// , { 
+		// 	title: 'Contact us',
+		// 	message: 'There seems to be an error. Please try again',
+		// 	id: 'contact-us',
+		// 	message: 'Error!',
+		// 	errors: errors
+		// });
 	}
 });
 
