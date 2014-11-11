@@ -28,6 +28,12 @@ app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 app.use('/', routes);
 app.use('/users', users);
 
+app.post('/contact-us', function(req, res) {
+    var name = req.body.name;
+    var email = req.body.email;
+    var message = req.body.message;
+
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
