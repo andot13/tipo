@@ -21,6 +21,7 @@ include ./layouts/header.jade
 									li= error.msg
 						-	else 
 						div.contact-form.col-sm-4.col-md-4.col-lg-4
+							p(class = successClass)=message 
 							p.success#success
 							form#contact-us-form(method="post" action="/contact-us")
 								input#name.form-control(type="text" placeholder="Name" name="name")
