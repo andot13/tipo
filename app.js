@@ -6,6 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 
+var urlencode = require('urlencode');
+var json = require('json-middleware');
+var multipart = require('connect-multiparty');
+var multipartMiddleware = multipart();
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
