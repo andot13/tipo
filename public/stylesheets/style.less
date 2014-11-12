@@ -14,6 +14,7 @@
 @font-family-primary : "Varela Round", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 @font-family-secondary : "Helvetica", Arial, Lucida Grande, sans-serif;
 @font-family-tertiary : "Georgia";
+
 /**
 *
 * Misc
@@ -50,6 +51,45 @@ body {
 	}
 }
 
+// Change navbar collapse width to @screen-sm-max
+@media (max-width: @screen-sm-max){
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+  		display:block !important;
+	}
+}
+
+
 @media (min-width: @screen-md-min) {
 	.navbar {
 		background: url("/images/bg-header-gradient.png") repeat-x !important;
@@ -66,6 +106,8 @@ body {
 		}
 	}
 }
+
+
 
 .header-logo {
 	overflow: hidden;
@@ -186,15 +228,6 @@ body {
 
 	.img-model {
 		padding: 20px 0;
-	}
-
-	.model-section {
-		p {
-			font-family: @font-family-tertiary;
-			font-size: 13pt;
-			line-height: 30px;
-			color: @color-gray-lighter;
-		}
 	}
 
 }
@@ -644,6 +677,14 @@ body {
 		line-height: 34px;
 		color: @color-blue-dark;
 		font-size: 18pt;
+	}
+
+	.the-model-text {
+		font-family: @font-family-tertiary;
+		font-size: 12pt;
+		margin-top: 18px;
+		line-height: 28px;
+		color: @color-gray-lighter;
 	}
 }
 

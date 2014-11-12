@@ -24,19 +24,12 @@ router.get('/contact-us', function(req, res) {
 	res.render('contact-us.jade', { title: 'Contact us', id: 'contact-us'});
 });
 
-router.post('/contact-us', function(req, res) {
-	// req.assert('name', 'Please enter you name.').notEmpty();
-	// req.assert('email', 'Please provide a valid email').isEmail();  
+router.get('/the-business-case', function(req, res) {
+	res.render('the-business-case.jade', { title: 'The Business Case', id: 'the-business-case'});
+});
 
-	// var errors = req.validationErrors();  
-	// if( !errors){   //No errors were found.  Passed Validation!
-	// 	res.render('/contact-us'), { 
-	// 		title: 'Contact us',
-	// 		message: 'Thank you! Your message has been sent!',
-	// 		id: 'contact-us',
-	// 		successClass : 'success',
-	// 		errors: {}
-	// 	});
+router.post('/contact-us', function(req, res) {
+
 
 	var name = req.body.name;
 	var email = req.body.email;
@@ -48,8 +41,8 @@ router.post('/contact-us', function(req, res) {
 	    "from_email": email,
 	    "from_name": name,
 	    "to": [{
-	            "email": "andotjackass@gmail.com",
-	            "name": "Andy"
+	            "email": "jamie.mcbrien@optim2.com",
+	            "name": "Jamie Mcbrien"
 	        }],
 	    "headers": {
 	        "Reply-To": email
@@ -67,16 +60,7 @@ router.post('/contact-us', function(req, res) {
 	    console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
 	    // A mandrill error occurred: Unknown_Subaccount - No subaccount exists with the id 'customer-123'
 	});
-	// }
-	// else {   //Display errors to user
-	// 	res.render('/contact-us', { 
-	// 		title: 'Contact us',
-	// 		message: 'There seems to be an error. Please try again',
-	// 		id: 'contact-us',
-	// 		message: 'Error!',
-	// 		errors: errors
-	// 	});
-	// }
+
 });
 
 
