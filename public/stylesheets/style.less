@@ -638,34 +638,52 @@ body {
 	}
 
 	.homepage-table {
-		background: white;
+		display: none;
+	}
 
-		ul {
-			margin-top: 15px;
-			margin-left: -10px;
-			li {
-				margin: 5px 0;
-				color: #434c53;
-
-				font-size: 10pt;
-			}
+	@media (min-width: @screen-lg-min) { 
+		.table-image-sm {
+			display: none;
+		}
+		
+		.homepage-table {
+			display: block;
 		}
 	}
 
-	.check {
-		background: url("/images/icon-check.png") no-repeat;
-		height: 43px;
-		width: 32px;
-		display: block;
-		margin: 0 auto;
-		overflow: hidden;
-		white-space: nowrap;
-		text-indent: 100%;
+	@media (min-width: @screen-sm-min) { 
+		.homepage-table {
+			background: white;
+
+			ul {
+				margin-top: 15px;
+				margin-left: -10px;
+				li {
+					margin: 5px 0;
+					color: #434c53;
+
+					font-size: 10pt;
+				}
+			}
+		}
+
+		.check {
+			background: url("/images/icon-check.png") no-repeat;
+			height: 43px;
+			width: 32px;
+			display: block;
+			margin: 0 auto;
+			overflow: hidden;
+			white-space: nowrap;
+			text-indent: 100%;
+		}
+
+		h4 {
+			color: @color-blue-dark;
+		}
 	}
 
-	h4 {
-		color: @color-blue-dark;
-	}
+
 }
 
 .model-section {
