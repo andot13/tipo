@@ -4,7 +4,7 @@ include ./layouts/header.jade
 			div.container-fluid
 				div.row
 					div.header-text
-						div.col-sm-6.col-sm-offset-1.col-md-6.col-md-offset-1.col-lg-6.col-lg-offset-1
+						div.col-sm-5.col-sm-offset-1.col-md-5.col-md-offset-1.col-lg-5.col-lg-offset-1
 							h2 Get in touch with us.
 							p We love to hear from you so please don't hesitate to get in touch. We promise to respond within 12 hours of receiving your message!
 						- function isEmptyObject(obj) {
@@ -20,7 +20,7 @@ include ./layouts/header.jade
 								- each error in errors
 									li= error.msg
 						-	else 
-						div.contact-form.col-sm-4.col-md-4.col-lg-4
+						div.contact-form.col-sm-5.col-md-5.col-lg-5
 							p(class = successClass)=message 
 							p.success#success
 							form#contact-us-form(method="post" action="/contact-us")
