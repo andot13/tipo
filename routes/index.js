@@ -24,8 +24,8 @@ router.get('/contact-us', function(req, res) {
 	res.render('contact-us.jade', { title: 'Contact us', id: 'contact-us'});
 });
 
-router.get('/the-business-case', function(req, res) {
-	res.render('the-business-case.jade', { title: 'The Business Case', id: 'the-business-case'});
+router.get('/cost-savings', function(req, res) {
+	res.render('cost-savings.jade', { title: 'Cost savings', id: 'cost-savings'});
 });
 
 router.post('/contact-us', function(req, res) {

@@ -37,4 +37,48 @@ $(document).ready(function() {
 		}
 	});
 
+	$('.financial-controller-au').addClass("hidden-elem").viewportChecker({
+	    classToAdd: 'visible-elem animated financial-controller-au-expandwidth',
+	    offset: 100
+   	});
+
+	$('.financial-controller-mnl').addClass("hidden-elem").viewportChecker({
+	    classToAdd: 'visible-elem animated financial-controller-mnl-expandwidth',
+	    offset: 100
+   	});
+
+	$('.senior-accountant-au').addClass("hidden-elem").viewportChecker({
+	    classToAdd: 'visible-elem animated senior-accountant-au-expandwidth',
+	    offset: 100
+   	});
+
+	$('.senior-accountant-mnl').addClass("hidden-elem").viewportChecker({
+	    classToAdd: 'visible-elem animated senior-accountant-mnl-expandwidth',
+	    offset: 100
+   	});
+
+	$('.assistant-accountant-au').addClass("hidden-elem").viewportChecker({
+	    classToAdd: 'visible-elem animated assistant-accountant-au-expandwidth',
+	    offset: 100
+   	});
+
+	$('.assistant-accountant-mnl').addClass("hidden-elem").viewportChecker({
+	    classToAdd: 'visible-elem animated assistant-accountant-mnl-expandwidth',
+	    offset: 100
+	});
+
+	$('.accounts-clerk-au').addClass("hidden-elem").viewportChecker({
+	    classToAdd: 'visible-elem animated accounts-clerk-au-expandwidth',
+	    offset: 100
+   	});
+
+	$('.accounts-clerk-mnl').addClass("hidden-elem").viewportChecker({
+	    classToAdd: 'visible-elem animated accounts-clerk-mnl-expandwidth',
+	    offset: 100
+	});
+ 
+
+
+
+
 });
