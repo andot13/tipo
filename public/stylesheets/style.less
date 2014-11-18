@@ -33,6 +33,10 @@
      opacity:1;
 }
 
+.no-border {
+	border: none !important; 
+}
+
 body {
 }
 
@@ -47,6 +51,33 @@ body {
 
 		li {
 			font-weight: bold;
+		}
+	}
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border: none;
+}
+
+@media (max-width: @screen-sm-max) {
+	.navbar {
+		z-index: 10;
+		padding: 26px;
+		border: none;
+		background: white;
+
+		ul {
+			margin-top: 24px;
+
+			li {
+				font-weight: bold;
+				font-size: 13pt;
+				padding: 12px 0;
+
+				a {
+					color: @color-blue !important;
+				}
+			}
 		}
 	}
 }
@@ -310,8 +341,19 @@ body {
 	.job-title {
 		color: @color-gray;
 		font-weight: normal;
-		font-size: 13pt;
+		font-size: 11pt;
+		text-align: left;
 	}
+
+	@media (min-width: @screen-sm-min) {
+		.job-title {
+			color: @color-gray;
+			font-weight: normal;
+			font-size: 13pt;
+			text-align: right;
+		}
+	}
+
 
 	.cost-au {
 		color: #53517d;
@@ -472,7 +514,13 @@ body {
 			left: 70px;
 			opacity: 0;
 			display: block;
-			width: 150px;
+			width: 140px;
+		}
+
+		@media (min-width: @screen-sm-min) { 
+			.figure {
+				width: 150px;
+			}
 		}
 	}
 
@@ -504,6 +552,7 @@ body {
 			display: block;
 			width: 150px;
 		}
+
 	}
 
 	.assistant-accountant-au-expandwidth {
@@ -532,7 +581,13 @@ body {
 			left: 70px;
 			opacity: 0;
 			display: block;
-			width: 150px;
+			width: 120px;
+		}
+
+		@media (min-width: @screen-sm-min) { 
+			.figure {
+				width: 150px;
+			}
 		}
 	}
 
@@ -592,7 +647,13 @@ body {
 			left: 70px;
 			opacity: 0;
 			display: block;
-			width: 150px;
+			width: 120px;
+		}
+
+		@media (min-width: @screen-sm-min) { 
+			.figure {
+				width: 150px;
+			}
 		}
 	}
 
@@ -693,16 +754,17 @@ body {
 
 	.bpo-in-ph-container {
 		padding: 20px 0;
-		background: @color-blue-dark;
+		overflow: hidden;
+		background: #ebf0f4 url(/images/bg-homepage-pattern-gray.png);
 
 		h2 {
-			color: @color-white;
+			color: @color-blue-dark;
 		}
 		ul {
 			list-style: none;
 			li {
 				display: relative;
-				color: @color-white;
+				color: @color-blue-dark;
 				margin: 40px 0;
 				font-size: 12pt;
 
@@ -1184,33 +1246,88 @@ body {
 .footer-section {
 	padding: 40px 0;
 
-	.footer-logo {
-		overflow: hidden;
-		white-space: nowrap;
-		display: block; 
-		height: 48px; 
-		width: 226px;
-		background: url("/images/optiBPO-logo.png") no-repeat; 
-		text-indent: 100%;
+	.footer-logo-container {
+
+		.footer-logo {
+			overflow: hidden;
+			white-space: nowrap;
+			display: block;
+			margin: 0 auto;
+			height: 48px; 
+			width: 226px;
+			background: url("/images/optiBPO-logo.png") no-repeat; 
+			text-indent: 100%;
+		}
+	}
+
+	@media (min-width: @screen-sm-min) {
+		.footer-logo-container {
+			.footer-logo {
+				display: inline-block;
+				overflow: hidden;
+				white-space: nowrap;
+				height: 48px; 
+				width: 236px;
+				text-indent: 120%;
+			}
+		}
 	}
 
 	ul {
-		position: relative;
-		top: 10px;
+		list-style-type: none;
+		margin: 20px 0 0 0;
+		padding: 0;
+
 		li {
-			margin-right: 6px;
-			a {
+			text-align: center;	
+			margin: 0;
+			padding: 10px;
+
+			a { 
+				display: block;
+				padding: 10px;
 				font-weight: bold;
-				font-size: 10pt;
 				color: @color-blue;
 			}
 		}
 	}
 
+	@media (min-width: @screen-sm-min) {
+		ul {
+			position: relative;
+			top: 10px;
+			margin: 0;
+			list-style: none;
+
+			li {
+				padding: 0;
+				margin-left: 16px;
+				float: left;
+
+				a {
+					font-weight: bold;
+					font-size: 10pt;
+					padding: 0;
+					color: @color-blue;
+				}
+			}
+		}
+	}
+
+	
+	.copy-container {
+		text-align: center;
+	}
 	.copy-right {
 		color: @color-gray-lighter;
 		position: relative;
 		top:10px;
+	}
+
+	@media (min-width: @screen-sm-min) {
+		.copy-container {
+			text-align: right;
+		}
 	}
 }
 
@@ -1354,43 +1471,100 @@ body {
 
 		.name {
 			color: @color-blue-dark;
-			font-size: 15pt;
+			font-size: 18pt;
 			font-weight: normal;
 		}
 
 		.title {
-			color: @color-gray-lighter;
+			color: @color-gray;
+			font-size: 12pt;
 			font-weight: bold;
 			font-weight: normal;
-			margin-bottom: 20px;
+			margin-bottom: 30px;
 		}
 
 		.address {
 			font-family: @font-family-secondary;
 			color: @color-gray-lighter;
-			font-size: 13pt;
+			font-size: 11pt;
+
+			position: relative;
+			left: 10px;
+			top: -3px;
 		}	
+
+		.icon-location {
+			background: url("/images/icon-location.png") no-repeat;
+			display: inline-block;
+			width: 14px;
+			height: 14px;
+			float: left;
+		}
 
 		.phone-number {
 			color: @color-blue;
 			font-family: @font-family-secondary;
-			font-size: 12pt;
+
+			.icon-mobile {
+				background: url("/images/icon-phone.png") no-repeat;
+				display: inline-block;
+				width: 14px;
+				height: 14px;
+			}
+
+			.num {
+				position: relative;
+				left: 10px;
+				top: -3px;
+				font-size: 11pt;
+			}
 		}
+
 
 		#map-canvas {
 			width: 100%;
 			height: 500px;
 		}
 
-		.contact-person {
-			padding-bottom: 40px;
-		}
 	}
 
 	@media (min-width: @screen-sm-min) {
 		.our-office-section {
 			margin-top: 0px;
 		}
+	}
+
+	.map-container {
+		position: relative;
+	}
+
+	#map-canvas {
+		position: relative;
+		z-index: 1;
+	}
+
+	.contact-container{
+		background: rgba(255,255,255, .9);
+		border: 1px solid @color-blue;
+		position: absolute;
+		padding-top: 20px;
+		top: 270px;
+		z-index: 999;
+	}
+
+	@media (min-width: @screen-sm-min) {
+
+		.contact-container{
+			background: rgba(255,255,255, .9);
+			border: 1px solid @color-blue;
+			// height: 270px;
+			position: absolute;
+			padding-top: 40px;
+			padding-bottom: 40px;
+			top: 80px;
+			z-index: 999;
+		}
+
 	}
 }
 

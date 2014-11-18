@@ -32,30 +32,24 @@ include ./layouts/header.jade
 			div.container
 				div.row
 					h2.our-office-text.text-center Our office
-					div.contact-person.col-sm-4.col-md-4.col-lg-4
-						strong.name Jamie Mcbrien
-						p.title Director, optiBPO
-						address.address Level 12 309 Kent Street Sydney NSW 2000
-						a.phone-number(href="callto:+61 2 8071 4155") +61 2 8071 4155
-					div.col-sm-8.col-md-8.col-lg-8
-						div#map-canvas
+				div.row
+					div.map-container
+						div.contact-container.col-xs-12.col-sm-3.col-sm-offset-8.col-md-3.col-md-offset-8.col-lg-4.col-lg-offset-7
+							div.contact-person
+								strong.name Jamie Mcbrien
+								p.title Director, optiBPO
+								p
+									span.icon-location 
+									span.address Level 12 309 Kent Street Sydney NSW 2000
+								a.phone-number(href="callto:+61 2 8071 4155")
+									span.icon-mobile
+									span.num +61 2 8071 4155
+			div#map-canvas
 
 		div.blue-pattern
 		include ./layouts/footer.jade
 		script(src="https://maps.googleapis.com/maps/api/js")
 		script.
-			function initialize() {
-				var mapCanvas = document.getElementById('map-canvas');
-
-				
-				var mapOptions = {
-					center: new google.maps.LatLng(-33.8673199, 151.2043096),
-					zoom: 14,
-					mapTypeId: google.maps.MapTypeId.ROADMAP
-				}
-
-				var map = new google.maps.Map(mapCanvas, mapOptions, marker);
-			}
 			google.maps.event.addDomListener(window, 'load', initialize);
 
 			function initialize() {
@@ -64,10 +58,13 @@ include ./layouts/header.jade
 					var mapOptions = {
 						center: location,
 						zoom: 15,
-						mapTypeId: google.maps.MapTypeId.ROADMAP
+						mapTypeId: google.maps.MapTypeId.ROADMAP,
+						scrollwheel: false
 					}
 					var map = new google.maps.Map(mapCanvas, mapOptions);
 					var icon = "http://optibpo.com/images/icon-contact-us-marker.png";
+
+					map.panBy(130, 0);
 
 					new google.maps.Marker({
 							position: location,
@@ -75,5 +72,8 @@ include ./layouts/header.jade
 							icon: icon
 					});
 			}
+
+
+
 			google.maps.event.addDomListener(window, 'load', initialize);
 
