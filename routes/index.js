@@ -33,10 +33,12 @@ router.post('/contact-us', function(req, res) {
 
 	var name = req.body.name;
 	var email = req.body.email;
+	var phoneNumber = req.body.phone;
+	var position = req.body.position;
 	var postMessage = req.body.message;
 
 	var message = {
-	    "text": postMessage,
+	    "html": "Name: <strong>" + name + "</strong><br>" + "Email address: <strong>"  + email + "</strong><br>Phone number: <strong>"  + phoneNumber +  "</strong><br>Position: <strong>" + position + "</strong><br><br><br>" + postMessage ,
 	    "subject": "optiBPO Contact Form Submission",
 	    "from_email": email,
 	    "from_name": name,

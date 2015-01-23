@@ -25,6 +25,8 @@ include ./layouts/header.jade
 							p.success#success
 							form#contact-us-form(method="post" action="/contact-us")
 								input#name.form-control(type="text" placeholder="Name" name="name")
+								input#phone-number.form-control(type="text" placeholder="Phone number" name="phone")
+								input#position.form-control(type="text" placeholder="Position" name="position")
 								input#email.form-control(type="text" placeholder="Email" name="email")
 								textarea#message.form-control(placeholder="Message" name="message" rows="5")
 								input.contact-submit.btn-block(type="submit")
